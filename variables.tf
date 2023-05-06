@@ -16,6 +16,12 @@ variable "db_instance_name" {
   default     = "database-instance"
 }
 
+variable "repository_id" {
+  description = "Google repository id"
+  type        = string
+  default     = "fiap9aso-hackaton-g4"
+}
+
 variable "db_user_name" {
   description = "Database user name"
   type        = string
@@ -27,4 +33,3 @@ variable "db_user_pw" {
   type        = string
   default     = "user-pw"
 }
-

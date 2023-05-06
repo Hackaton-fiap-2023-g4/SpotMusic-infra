@@ -1,6 +1,6 @@
 resource "google_artifact_registry_repository" "my-repo" {
   location = var.region
-  repository_id = "labdevops"
+  repository_id = var.repository_id
   description = "Imagens Docker"
   format = "DOCKER"
 }
@@ -11,7 +11,7 @@ resource "google_sql_database" "database" {
 }
 
 resource "google_sql_database_instance" "instance" {
-  name             = var.db-instance-name
+  name             = var.db_instance_name
   region           = var.region
   database_version = "MYSQL_8_0"
   settings {
